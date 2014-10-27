@@ -10,7 +10,7 @@ public interface Dao {
 
 	/**
 	 * dodanie artyku³u do bazy danych
-	 * @param path scie¿ka do pliku
+	 * @param path scie¿ka do Pliku
 	 * @param type artyku³u (EN angielski, PL polski, CO kod)
 	 *  @param keywords zbiór s³ów kluczowych
 	 * 
