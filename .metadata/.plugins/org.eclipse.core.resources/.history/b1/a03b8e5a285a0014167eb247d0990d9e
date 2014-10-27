@@ -1,0 +1,29 @@
+package Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import database.DAO;
+
+public class Test {
+	public static void main(String[] args) {
+		DAO dao = new DAO();
+		
+		Set<String> set = new HashSet<>();
+
+		set.add("IR");
+		set.add("swinia");
+		set.add("Krowa");
+		set.add("Baran");
+
+		for (int i = 0; i < 100; i++) {
+			dao.addArticle("sciezka4"+i, "chemiczne", set);
+		}
+
+		// dao.newKeywords("sciezka2", set) ;
+		// int n = dao.newKeywords("sciezka", set);
+		// int n = dao.addArticle("sciezka2", "rolnicza", set);
+
+		//System.out.println(dao.findArticeWithAtLeastOne(set));
+	}
+}

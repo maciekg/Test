@@ -1,0 +1,21 @@
+package Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import database.DBUserInterface;
+import database.DaoImp;
+import database.Type;
+
+public class Main {
+	public static void main(String[] args) {
+		DBUserInterface dao = new DaoImp();
+		Set<String> set = new HashSet<String>();
+		set.add("Dupa");
+		set.add("PPP");
+		System.out.println(dao.addArticle("C:33ssss", Type.EN, set));
+		
+		
+	}
+
+}

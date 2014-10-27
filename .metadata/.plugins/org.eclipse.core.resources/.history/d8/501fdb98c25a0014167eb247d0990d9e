@@ -1,0 +1,8 @@
+package database;
+
+public class ArticleOptionalInfo {
+	private String title;
+	private String authors;
+	private String source;
+	private Integer year;
+}

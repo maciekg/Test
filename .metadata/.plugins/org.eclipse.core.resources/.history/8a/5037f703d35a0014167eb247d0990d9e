@@ -1,0 +1,102 @@
+package database;
+
+import java.util.Set;
+
+public class DAOImp implements DAO {
+	private HibernateAccess hibernateAccess;
+
+	public DAOImp() {
+		hibernateAccess = new HibernateAccess();
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#addArticle(java.lang.String, database.Type, java.util.Set)
+	 */
+	@Override
+	public int addArticle(String path, Type type, Set<String> keywords) {
+		return hibernateAccess.addArticle(path, type, keywords, null);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#addArticle(java.lang.String, database.Type, java.util.Set, database.ArticleOptionalInfo)
+	 */
+	@Override
+	public int addArticle(String path, Type type, Set<String> keywords,
+			ArticleOptionalInfo aoi) {
+		return hibernateAccess.addArticle(path, type, keywords, aoi);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#setArticleOptionalInfo(java.lang.String, database.ArticleOptionalInfo)
+	 */
+	@Override
+	public int setArticleOptionalInfo(String path, ArticleOptionalInfo aoi) {
+		return hibernateAccess.setArticleOptionalInfo(path, aoi);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#getArticleOptionalInfo(java.lang.String)
+	 */
+	@Override
+	public ArticleOptionalInfo getArticleOptionalInfo(String path) {
+		return hibernateAccess.getArticleOptionalInfo(path);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#changeKeywords(java.lang.String, java.util.Set)
+	 */
+	@Override
+	public int changeKeywords(String path, Set<String> keywords) {
+		return hibernateAccess.setKeywords(path, keywords, false);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#addKeywords(java.lang.String, java.util.Set)
+	 */
+	@Override
+	public int addKeywords(String path, Set<String> keywords) {
+		return hibernateAccess.setKeywords(path, keywords, true);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#findArticesWithAtLeastOne(java.util.Set, database.Type)
+	 */
+	@Override
+	public Set<String> findArticesWithAtLeastOne(Set<String> set, Type type) {
+		return hibernateAccess.findArticles(set, type, false);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#findArticesWithAll(java.util.Set, database.Type)
+	 */
+	@Override
+	public Set<String> findArticesWithAll(Set<String> set, Type type) {
+		return hibernateAccess.findArticles(set, type, true);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#removeAll()
+	 */
+	@Override
+	public int removeAll() {
+		return hibernateAccess.removeAll();
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#changeType(java.lang.String, database.Type)
+	 */
+	@Override
+	public int changeType(String path, Type newType) {
+		return hibernateAccess.changeType(path, newType);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#changePath(java.lang.String, java.lang.String)
+	 */
+	@Override
+	public int changePath(String currentPath, String newPath) {
+		return hibernateAccess.changePath(currentPath, newPath);
+
+	}
+
+}

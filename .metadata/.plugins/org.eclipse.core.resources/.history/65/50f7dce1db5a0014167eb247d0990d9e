@@ -1,0 +1,50 @@
+package Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import database.DAOImp;
+import database.Type;
+
+public class Main {
+public static void main(String[] args) {
+	DAOImp dao=new DAOImp();
+	
+	Set<String> set=new HashSet<String>();
+	set.add("swinia");
+	set.add("krowa");
+	Set<String> set2=new HashSet<String>();
+	set2.add("tygrys");
+	set2.add("s³oñ");
+	
+	
+	
+	System.out.println(dao.getKeywords("C:rrd:"));
+	
+	
+	
+	
+	
+	
+	
+	
+//dao.changeKeywords("C::", set);
+	System.out.println(dao.removeArticle("C:rr:"));
+//dao.addArticle("C:rrd:", Type.PL, set2);
+//	System.out.println(dao.changePath("C::", "E::"));
+//	System.out.println(dao.changeType("E::", Type.CO));
+	//System.out.println(dao.addArticle("D:/", Type.CO, set));
+//	//System.out.println(dao.findArticesWithAll(set2, Type.CO));
+//	ArticleOptionalInfo aoi=new ArticleOptionalInfo();
+//	aoi.setAuthors("Maciej & Marta");
+//	aoi.setYear(2014);
+//	aoi.setSource("www.google.pl");
+//	aoi.setTitle("obciaganie");
+////dao.setArticleOptionalInfo("C:rew/",aoi);	
+//	//dao.addArticle("c:windows", Type.EN, set,aoi);
+//	System.out.println(dao.changeKeywords("C:/", set));
+//	System.out.println(dao.getArticleOptionalInfo("C:/"));
+//	dao.removeAll();
+	
+}
+}

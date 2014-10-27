@@ -1,0 +1,39 @@
+package database;
+
+import java.util.Set;
+
+public class DAO {
+	private HibernateAccess hibernateAccess;
+
+	public DAO() {
+		hibernateAccess = new HibernateAccess();
+	}
+
+	
+	public int addArticle(String path, String title, Set<String> keywords) {
+		return hibernateAccess.addArticle(path, title, keywords);
+	}
+
+	public int changeKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,false);
+	}
+	
+	public int addKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,true);
+	}
+	
+	public Set<String> findArticeWithAtLeastOne(Set<String> set){
+		return hibernateAccess.findArticles(set,false);
+	}
+	
+	public Set<String> findArticeWithAll(Set<String> set){
+		return hibernateAccess.findArticles(set,true);
+	}
+	
+	public int removeAll(){
+		return 0;
+	}
+	
+	
+
+}

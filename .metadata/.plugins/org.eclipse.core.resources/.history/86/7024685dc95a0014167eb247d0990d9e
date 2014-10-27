@@ -1,0 +1,58 @@
+package database;
+
+import java.util.Set;
+
+public class DAOImp {
+	private HibernateAccess hibernateAccess;
+
+	public DAOImp() {
+		hibernateAccess = new HibernateAccess();
+	}
+
+	public int addArticle(String path, Type type, Set<String> keywords) {
+		return hibernateAccess.addArticle(path, type, keywords, null);
+	}
+
+	public int addArticle(String path, Type type, Set<String> keywords,
+			ArticleOptionalInfo aoi) {
+		return hibernateAccess.addArticle(path, type, keywords, aoi);
+	}
+
+	public int setArticleOptionalInfo(String path, ArticleOptionalInfo aoi) {
+		return hibernateAccess.setArticleOptionalInfo(path, aoi);
+	}
+
+	public ArticleOptionalInfo getArticleOptionalInfo(String path) {
+		return hibernateAccess.getArticleOptionalInfo(path);
+	}
+
+	public int changeKeywords(String path, Set<String> keywords) {
+		return hibernateAccess.setKeywords(path, keywords, false);
+	}
+
+	public int addKeywords(String path, Set<String> keywords) {
+		return hibernateAccess.setKeywords(path, keywords, true);
+	}
+
+	public Set<String> findArticesWithAtLeastOne(Set<String> set, Type type) {
+		return hibernateAccess.findArticles(set, type, false);
+	}
+
+	public Set<String> findArticesWithAll(Set<String> set, Type type) {
+		return hibernateAccess.findArticles(set, type, true);
+	}
+
+	public int removeAll() {
+		return hibernateAccess.removeAll();
+	}
+	
+	public int changeType(String path, Type newType){
+	return hibernateAccess.changeType(path, newType); 
+	}
+	public int changePath(String currentPath, String newPath){
+		return hibernateAccess.changePath(currentPath, newPath);
+	
+	}
+	
+	
+}

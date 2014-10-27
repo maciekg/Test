@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="database.HibernateAccess"/>
+<fullyQualifiedTypeName name="org.hibernate.mapping.Array"/>
+<fullyQualifiedTypeName name="database.DAO"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Criterion"/>
+<fullyQualifiedTypeName name="org.hibernate.Criteria"/>
+<fullyQualifiedTypeName name="org.hibernate.Query"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.hibernate.classic.Session"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
+<fullyQualifiedTypeName name="database.Assignment"/>
+<fullyQualifiedTypeName name="database.DAOImp"/>
+<fullyQualifiedTypeName name="database.Article"/>
+<fullyQualifiedTypeName name="org.xml.sax.HandlerBase"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="database.Keyword"/>
+<fullyQualifiedTypeName name="database.ArticleOptionalInfo"/>
+<fullyQualifiedTypeName name="database.Dao"/>
+<fullyQualifiedTypeName name="database.DaoImp"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="database.Type"/>
+</qualifiedTypeNameHistroy>

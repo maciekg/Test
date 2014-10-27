@@ -1,0 +1,6 @@
+package database.entities;
+
+public class Assignment {
+	private Long articleId;
+	private Long keywordId;
+}

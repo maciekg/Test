@@ -1,0 +1,21 @@
+package database;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Test {
+	public static void main(String[] args) {
+		DAO dao = new DAO();
+		Set<String> set = new HashSet<>();
+
+		set.add("Krowa");
+		set.add("swinia");
+	
+		dao.addArticle("sciezka2", "Ronik", set);
+		 //int n = dao.newKeywords("sciezka", set);
+		//int n = dao.addArticle("sciezka2", "rolnicza", set);
+		
+		 
+		 //System.out.println(dao.findArtice(set));
+	}
+}

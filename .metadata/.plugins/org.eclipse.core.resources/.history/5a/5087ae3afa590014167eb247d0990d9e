@@ -1,0 +1,20 @@
+package database;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Test {
+	public static void main(String[] args) {
+		DAO dao = new DAO();
+		Set<String> set = new HashSet<>();
+
+
+
+		set.add("CPMD");
+set.add("IR");
+		//int n = dao.setKeyword("sciezka", set);
+		int n=dao.addArticle("sciezka", "Ice", set)
+		System.out.println(n);
+	}
+
+}

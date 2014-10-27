@@ -1,0 +1,7 @@
+package database.entities;
+
+public class Article {
+	private Long id;
+	private String path;
+	private String title;
+}

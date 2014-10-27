@@ -1,0 +1,18 @@
+package database.entities;
+
+public class Assignment {
+	private Long articleId;
+	private Long keywordId;
+	public Long getArticleId() {
+		return articleId;
+	}
+	public void setArticleId(Long articleId) {
+		this.articleId = articleId;
+	}
+	public Long getKeywordId() {
+		return keywordId;
+	}
+	public void setKeywordId(Long keywordId) {
+		this.keywordId = keywordId;
+	}
+}

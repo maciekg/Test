@@ -1,0 +1,92 @@
+package database;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+public class DAO {
+	private HibernateAccess hibernateAccess;
+
+	public DAO() {
+		hibernateAccess = new HibernateAccess();
+	}
+
+	
+	public int addArticle(String path, String title, Set<String> keywords) {
+		return hibernateAccess.addArticle(path, title, keywords);
+	}
+
+	
+	
+	public int setKeyword(String path, Set<String> keywords){
+		return hibernateAccess.setKeyword(path, keywords,false);
+	}
+	
+	public int addKeyword(String path, Set<String> keywords){
+		return hibernateAccess.setKeyword(path, keywords,true);
+	}
+	
+	
+	
+	public int updateKeywords(String path, Set<String> keywords, boolean append) {
+		int result = 0;
+		Long articleId = hibernateAccess.getArticle(path);
+
+		if (articleId != null) {
+
+			if (!append) {
+
+				List<Long> toRemoveList = new ArrayList<Long>();
+
+				for (Object obj : hibernateAccess.getKeywords(articleId)) {
+					toRemoveList.add((((Keyword) obj).getId()));
+				}
+				for (Long toRemove : toRemoveList) {
+					hibernateAccess.deleteAssignment(articleId, toRemove);
+				}
+				hibernateAccess.deleteKeywordsWithoutAssignment();
+			}
+
+			List<Long> keywordsIdList = new ArrayList<Long>();
+			for (String kw : keywords) {
+				Long keywordId = hibernateAccess.putKeyword(kw);
+				if (keywordId != null) {
+					keywordsIdList.add(keywordId);
+
+				}
+			}
+
+			for (Long id : keywordsIdList) {
+				hibernateAccess.putAssignment(articleId, id);
+			}
+
+			result = 1;
+		}
+		return result;
+	}
+
+	public int changeTitle(String path, String newTitle) {
+		int result = 0;
+		Long articleId = hibernateAccess.getArticle(path);
+
+		if (articleId != null) {
+
+			result = hibernateAccess.changeTitle(articleId, newTitle);
+
+		}
+		return result;
+	}
+
+	public int changePath(String oldPath, String newPath) {
+		int result = 0;
+		Long articleId = hibernateAccess.getArticle(oldPath);
+
+		if (articleId != null) {
+
+			result = hibernateAccess.changePath(articleId, newPath);
+
+		}
+		return result;
+	}
+
+}

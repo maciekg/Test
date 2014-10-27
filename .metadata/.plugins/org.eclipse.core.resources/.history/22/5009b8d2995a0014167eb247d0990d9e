@@ -1,0 +1,63 @@
+package database;
+
+import java.util.Set;
+
+public class DAOImp implements DAO {
+	private HibernateAccess hibernateAccess;
+
+	public DAOImp() {
+		hibernateAccess = new HibernateAccess();
+	}
+
+	
+	/* (non-Javadoc)
+	 * @see database.DAO#addArticle(java.lang.String, java.lang.String, java.util.Set)
+	 */
+	@Override
+	public int addArticle(String path, String title, Set<String> keywords) {
+		return hibernateAccess.addArticle(path, title, keywords);
+	}
+
+	/* (non-Javadoc)
+	 * @see database.DAO#changeKeywords(java.lang.String, java.util.Set)
+	 */
+	@Override
+	public int changeKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,false);
+	}
+	
+	/* (non-Javadoc)
+	 * @see database.DAO#addKeywords(java.lang.String, java.util.Set)
+	 */
+	@Override
+	public int addKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,true);
+	}
+	
+	/* (non-Javadoc)
+	 * @see database.DAO#findArticesWithAtLeastOne(java.util.Set)
+	 */
+	@Override
+	public Set<String> findArticesWithAtLeastOne(Set<String> set){
+		return hibernateAccess.findArticles(set,false);
+	}
+	
+	/* (non-Javadoc)
+	 * @see database.DAO#findArticesWithAll(java.util.Set)
+	 */
+	@Override
+	public Set<String> findArticesWithAll(Set<String> set){
+		return hibernateAccess.findArticles(set,true);
+	}
+	
+	/* (non-Javadoc)
+	 * @see database.DAO#removeAll()
+	 */
+	@Override
+	public int removeAll(){
+		return 0;
+	}
+	
+	
+
+}

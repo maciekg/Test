@@ -1,0 +1,36 @@
+package database;
+
+import java.util.Set;
+
+public interface Dao {
+
+	public abstract int addArticle(String path, Type type, Set<String> keywords);
+
+	public abstract int addArticle(String path, Type type,
+			Set<String> keywords, ArticleOptionalInfo aoi);
+
+	public abstract int setArticleOptionalInfo(String path,
+			ArticleOptionalInfo aoi);
+
+	public abstract ArticleOptionalInfo getArticleOptionalInfo(String path);
+
+	public abstract int setKeywords(String path, Set<String> keywords);
+
+	public abstract int addKeywords(String path, Set<String> keywords);
+
+	public abstract Set<String> getKeywords(String path);
+
+	public abstract Set<String> findArticesWithAtLeastOne(Set<String> set,
+			Type type);
+
+	public abstract Set<String> findArticesWithAll(Set<String> set, Type type);
+
+	public abstract int removeAll();
+
+	public abstract int setType(String path, Type newType);
+
+	public abstract int setPath(String currentPath, String newPath);
+
+	public abstract int removeArticle(String path);
+
+}

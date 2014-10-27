@@ -1,0 +1,16 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="database.entities">
+	<class name="database.entities.Article" table="ARTICLES">
+		<id name="id" column="ID">
+			<generator class="native" />
+		</id>
+		<property name="title" column="TITLE" type="string" length="200">
+		</property>
+		<property name="path" column="PATH" type="string" length="100">
+		</property>
+
+	</class>
+</hibernate-mapping>

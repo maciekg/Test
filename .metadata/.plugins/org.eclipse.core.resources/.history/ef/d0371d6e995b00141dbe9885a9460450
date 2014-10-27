@@ -1,0 +1,10 @@
+
+package database;
+
+/**
+ * @author Maciek
+ *
+ */
+public enum Type {
+EN, PL, CO
+}

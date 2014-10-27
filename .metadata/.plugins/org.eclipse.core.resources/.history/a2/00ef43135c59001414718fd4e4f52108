@@ -1,0 +1,6 @@
+package database.entities;
+
+public class Keyword {
+	private Long id;
+	private String word;
+}

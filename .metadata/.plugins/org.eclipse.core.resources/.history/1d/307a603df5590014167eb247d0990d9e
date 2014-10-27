@@ -1,0 +1,20 @@
+package database;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Test {
+	public static void main(String[] args) {
+		DAO dao = new DAO();
+		 Set<String> set = new HashSet<>();
+
+		
+		
+		set.add("kosmos");
+		set.add("dupa");
+		 
+		dao.addArticle("sciezka", "zajebista praca", set);
+		
+	}
+
+}

@@ -1,0 +1,44 @@
+package databaseAccess;
+
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
+
+
+public class Item implements Serializable {
+
+	
+	private Integer itemId;
+	private String path;
+	private Set<Keyword> keywords = new HashSet<Keyword>(0);
+
+	public Item() {
+		super();
+	}
+
+	public Integer getItemId() {
+		return itemId;
+	}
+
+	public void setItemId(Integer itemId) {
+		this.itemId = itemId;
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+	public Set<Keyword> getKeywords() {
+		return keywords;
+	}
+
+	public void setKeywords(Set<Keyword> keywords) {
+		this.keywords = keywords;
+	}
+
+}

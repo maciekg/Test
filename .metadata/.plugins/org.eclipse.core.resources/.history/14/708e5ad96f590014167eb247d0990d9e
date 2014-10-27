@@ -1,0 +1,20 @@
+package database;
+
+import java.io.Serializable;
+
+public class Assignment implements Serializable{
+	private Long articleId;
+	private Long keywordId;
+	public Long getArticleId() {
+		return articleId;
+	}
+	public void setArticleId(Long articleId) {
+		this.articleId = articleId;
+	}
+	public Long getKeywordId() {
+		return keywordId;
+	}
+	public void setKeywordId(Long keywordId) {
+		this.keywordId = keywordId;
+	}
+}

@@ -1,0 +1,33 @@
+package Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import database.ArticleOptionalInfo;
+import database.Dao;
+import database.DaoImp;
+import database.Type;
+
+public class Main {
+public static void main(String[] args) {
+	Dao dao=new DaoImp();
+	
+	Set<String> set=new HashSet<String>();
+	set.add("swinia");
+	set.add("krowa");
+	
+	ArticleOptionalInfo aoi=new ArticleOptionalInfo()
+	aoi.setTitle("Obciaganie");
+	System.out.println(dao.addArticle("C:", Type.CO, set, new ArticleOptionalInfo()));
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+}
+}

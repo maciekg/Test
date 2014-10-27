@@ -1,0 +1,25 @@
+package Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import database.ArticleOptionalInfo;
+import database.Dao;
+import database.DaoImp;
+import database.Type;
+
+public class Main {
+public static void main(String[] args) {
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+}
+}

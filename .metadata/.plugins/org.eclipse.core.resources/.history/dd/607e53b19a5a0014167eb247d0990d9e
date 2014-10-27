@@ -1,0 +1,50 @@
+package database;
+
+import java.util.Set;
+
+public class DAOImp implements DAO {
+	private HibernateAccess hibernateAccess;
+
+	public DAOImp() {
+		hibernateAccess = new HibernateAccess();
+	}
+
+	
+
+	@Override
+	public int addArticle(String path, String title, Set<String> keywords) {
+		return hibernateAccess.addArticle(path, title, keywords);
+	}
+
+	@Override
+	public int changeKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,false);
+	}
+	
+
+	@Override
+	public int addKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,true);
+	}
+	
+
+	@Override
+	public Set<String> findArticesWithAtLeastOne(Set<String> set){
+		return hibernateAccess.findArticles(set,false);
+	}
+	
+
+	@Override
+	public Set<String> findArticesWithAll(Set<String> set){
+		return hibernateAccess.findArticles(set,true);
+	}
+	
+
+	@Override
+	public int removeAll(){
+		return 0;
+	}
+	
+	
+
+}

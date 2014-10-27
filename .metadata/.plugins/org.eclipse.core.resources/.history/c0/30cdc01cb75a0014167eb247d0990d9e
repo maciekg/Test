@@ -1,0 +1,33 @@
+package database;
+
+import java.util.Set;
+
+public interface DAO {
+
+	public abstract int addArticle(String path, String title,
+			Set<String> keywords);
+
+	public abstract int changeKeywords(String path, Set<String> keywords);
+
+	public abstract int addKeywords(String path, Set<String> keywords);
+
+	public abstract Set<String> findArticesWithAtLeastOne(Set<String> set);
+
+	public abstract Set<String> findArticesWithAll(Set<String> set);
+
+	int removeAll();
+
+	
+	int changePath(String oldPath, String newPath);
+	
+	int changeTitle(String path, String newTitle);
+	
+	
+	int changeType(String path);
+	
+	String getTitle(String path);
+	
+	String getType(String path);
+	
+
+}

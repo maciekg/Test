@@ -1,0 +1,14 @@
+package Test;
+
+import java.util.HashSet;
+
+import database.Dao;
+import database.DaoImp;
+
+public class Main {
+public static void main(String[] args) {
+	Dao dao=new DaoImp();
+	Set<String> set=new HashSet<String>();
+}
+
+}

@@ -1,0 +1,89 @@
+package database;
+
+import java.util.Set;
+
+public class DAOImp {
+	private HibernateAccess hibernateAccess;
+
+	public DAOImp() {
+		hibernateAccess = new HibernateAccess();
+	}
+
+	
+
+	public int addArticle(String path,Type type, String title, Set<String> keywords) {
+		return hibernateAccess.addArticle(path, type, title, keywords);
+	}
+
+	public int changeKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,false);
+	}
+	
+
+	public int addKeywords(String path, Set<String> keywords){
+		return hibernateAccess.setKeywords(path, keywords,true);
+	}
+	
+
+	public Set<String> findArticesWithAtLeastOne(Set<String> set, Type type){
+		return hibernateAccess.findArticles(set,false);
+	}
+	
+
+	public Set<String> findArticesWithAll(Set<String> set){
+		return hibernateAccess.findArticles(set,true);
+	}
+	
+
+	public int removeAll(){
+		return hibernateAccess.removeAll();
+	}
+
+
+	
+	
+	
+
+	@Override
+	public int changePath(String oldPath, String newPath) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+	@Override
+	public int changeTitle(String path, String newTitle) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	
+	
+
+	@Override
+	public String getTitle(String path) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public String getType(String path) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public int changeType(String path) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+
+}

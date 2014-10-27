@@ -1,0 +1,43 @@
+1413918588677	Move compilation unit
+1413918591478	Move compilation unit
+1413918613046	Copy compilation unit
+1413918619088	Delete element
+1413918623498	Delete element
+1413918641150	Delete element
+1413918713741	Copy package
+1413918718197	Delete element
+1413919918570	Rename type 'cxzd'
+1413919945226	Rename type 'Dao'
+1413919979663	Move compilation unit
+1413921856478	Rename package 'database.entities'
+1413929539968	Rename resource 'assignment.xml'
+1413957642121	Rename type 'DAO'
+1414008767632	Move file
+1414008781381	Move file
+1414008784054	Move file
+1414008949835	Move compilation unit
+1414009504139	Delete element
+1414009507147	Delete element
+1414057559731	Rename type 'DAO'
+1414057575384	Extract interface 'DAO'
+1414070107520	Encapsulate field 'type'
+1414071056864	Delete element
+1414071498682	Delete element
+1414078373175	Extract interface 'DAO'
+1414082292729	Delete element
+1414151147215	Delete element
+1414151160709	Rename resource 'article.hbm.xml'
+1414151170722	Rename resource 'keyword.hbm.xml'
+1414151776962	Delete element
+1414165751161	Extract interface 'Dao'
+1414165766056	Rename type 'DAOImp'
+1414166041140	Delete element
+1414166043406	Delete element
+1414168292954	Delete element
+1414168310237	Copy file
+1414168314719	Delete element
+1414168326384	Delete element
+1414168349233	Rename resource 'Keyword.hbm.xml'
+1414229735638	Rename type 'Dao'
+1414258957496	Rename type 'DBUserInterface'
+1414362291434	Delete element

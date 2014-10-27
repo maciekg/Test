@@ -1,0 +1,56 @@
+package database;
+
+import java.io.Serializable;
+import java.util.Set;
+
+public class Keyword implements Serializable {
+
+	private Integer keywordId;
+	private String word;
+	private Set<Item> items;
+
+	public Set<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(Set<Item> items) {
+		this.items = items;
+	}
+
+	public Keyword() {
+		super();
+	}
+
+	public Integer getKeywordId() {
+		return keywordId;
+	}
+
+	public void setKeywordId(Integer keywordId) {
+		this.keywordId = keywordId;
+	}
+
+	public String getWord() {
+		return word;
+	}
+
+	public void setWord(String word) {
+		this.word = word;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Keyword)) {
+			return false;
+		}
+		Keyword other = (Keyword) obj;
+
+		return word == other.word;
+	}
+	@Override
+	public  int hashCode(){
+		return 2;
+	}
+}

@@ -1,0 +1,32 @@
+package database;
+
+public class ArticleOptionalInfo {
+	private String title;
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getAuthors() {
+		return authors;
+	}
+	public void setAuthors(String authors) {
+		this.authors = authors;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
+	public Integer getYear() {
+		return year;
+	}
+	public void setYear(Integer year) {
+		this.year = year;
+	}
+	private String authors;
+	private String source;
+	private Integer year;
+}
